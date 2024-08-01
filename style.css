@@ -1,0 +1,146 @@
+:root{
+    --first:#4684fd;
+    --second:#8daef0;
+    --third: #155ff4;
+    --fourth:#acc5f7;
+    --fifth:#d4dff5;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+
+}
+
+section,form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+fieldset:nth-child(2){
+    display:flex ;
+    justify-content: center;
+    div{
+        width: 50%;
+    }
+}
+fieldset:not(:nth-child(2))  label{
+    display: block;
+}
+fieldset{
+    padding: 15px 10px;
+    border: none;
+    border-bottom: 1px rgb(207, 207, 207) solid;
+    width: 90%;
+    margin: auto;
+}
+section{
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+}
+form{
+    width: 60%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow:0 0 20px var(--second) ;
+}
+
+input{
+    outline: none;
+    border: 2px var(--second) solid;
+    caret-color: var(--first);
+    border-radius: 5px;
+    font-size: 16px;
+    width: 400px;
+    height: 35px;
+    padding: 5px 7px;
+    margin: 2px 0;
+
+}
+input:focus{
+    border: 3px var(--first) solid;
+}
+::placeholder{
+    font-size: 14px;
+    color: rgb(183, 183, 183);
+}
+label{
+    font-size: 17px;
+    margin-block: 5px 0;
+}
+select{
+ margin: 0 10px;
+ padding: 5px 7px;
+ width:200px;
+ font-size: 15px;
+ border-radius: 5px;
+ outline: none;
+ border: 2px var(--second) solid;
+}
+option:checked{
+    font-weight: 700;
+}
+input[type=submit]{
+    margin: auto;
+    margin-block: 15px;
+    width: 50%;
+    height: 40px;
+    background-color: var(--first);
+    border: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    &:hover{
+        background-color:var(--third);
+    }
+}
+
+
+
+/***********************************************/
+.table{
+position: relative;    
+width: 100%;
+    height:100% ;
+    padding: 50px 10px;
+}
+.table::before{
+position: absolute;
+content: "";
+width: 75%;
+top: 0;
+height: 2px;
+background-color: var(--second);
+opacity: 0.3;
+left: 50%;
+transform: translateX(-50%);
+}
+table{
+    border: 1px black solid;
+    border-collapse: collapse ;
+    width: 98%;
+    margin: auto;
+}
+th,td{
+border: 1px black solid;
+padding: 8px;
+font-size: 17px;
+text-align: left;
+}
+table tr:nth-child(even){
+background-color: var(--fourth);
+}
+td:first-child{
+    text-transform: capitalize;
+}
+td:nth-child(4){
+    text-transform: capitalize;
+}
+thead{
+    color: rgb(0, 0, 0);
+    background-color: var(--second);
+}
